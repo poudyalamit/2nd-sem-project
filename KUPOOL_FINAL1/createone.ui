@@ -87,7 +87,7 @@ color:gold;
    <property name="geometry">
     <rect>
      <x>310</x>
-     <y>70</y>
+     <y>20</y>
      <width>321</width>
      <height>41</height>
     </rect>
@@ -107,38 +107,11 @@ font-size: 35px;</string>
     <string> User Registration</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="firstname">
-   <property name="geometry">
-    <rect>
-     <x>192</x>
-     <y>203</y>
-     <width>191</width>
-     <height>41</height>
-    </rect>
-   </property>
-   <property name="styleSheet">
-    <string notr="true">#firstname {
-	padding: 10px;
-	background-color: #fff;
-border-radius:10px;
-
-	font-size: 20px;
-	color: #374957;
-}
-
-#firstname:focus {
-	background-color: #E3E8F0;
-}</string>
-   </property>
-   <property name="placeholderText">
-    <string>First Name</string>
-   </property>
-  </widget>
   <widget class="QLabel" name="firstnamelabel">
    <property name="geometry">
     <rect>
      <x>70</x>
-     <y>210</y>
+     <y>150</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -154,8 +127,8 @@ color:gold;</string>
   <widget class="QLabel" name="lastnamelabel">
    <property name="geometry">
     <rect>
-     <x>450</x>
-     <y>200</y>
+     <x>440</x>
+     <y>160</y>
      <width>111</width>
      <height>31</height>
     </rect>
@@ -171,8 +144,8 @@ color:gold;</string>
   <widget class="QLineEdit" name="lastname">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>200</y>
+     <x>560</x>
+     <y>160</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -222,7 +195,7 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>330</x>
-     <y>120</y>
+     <y>70</y>
      <width>251</width>
      <height>31</height>
     </rect>
@@ -245,8 +218,8 @@ background-color: transparent;
   <widget class="QLabel" name="phnolabel">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>320</y>
+     <x>40</x>
+     <y>230</y>
      <width>151</width>
      <height>41</height>
     </rect>
@@ -262,8 +235,8 @@ color:gold;</string>
   <widget class="QLineEdit" name="phno">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>320</y>
+     <x>200</x>
+     <y>240</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -288,8 +261,8 @@ border-radius: 10px;
   <widget class="QLabel" name="emaillabel">
    <property name="geometry">
     <rect>
-     <x>480</x>
-     <y>320</y>
+     <x>460</x>
+     <y>240</y>
      <width>91</width>
      <height>31</height>
     </rect>
@@ -305,8 +278,8 @@ color:gold;</string>
   <widget class="QLineEdit" name="email">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>310</y>
+     <x>560</x>
+     <y>230</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -332,7 +305,7 @@ border-radius: 10px;
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>420</y>
+     <y>330</y>
      <width>141</width>
      <height>31</height>
     </rect>
@@ -348,14 +321,14 @@ color:gold;</string>
   <widget class="QLineEdit" name="Department">
    <property name="geometry">
     <rect>
-     <x>190</x>
-     <y>413</y>
+     <x>200</x>
+     <y>330</y>
      <width>191</width>
      <height>41</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">#lineEdit_3 {
+    <string notr="true">#Department {
 	padding: 10px;
 	background-color: #fff;
 border-radius: 10px;
@@ -363,7 +336,7 @@ border-radius: 10px;
 	color: #374957;
 }
 
-#lineEdit_3:focus {
+#Department:focus {
 	background-color: #E3E8F0;
 }</string>
    </property>
@@ -374,8 +347,8 @@ border-radius: 10px;
   <widget class="QLabel" name="label_6">
    <property name="geometry">
     <rect>
-     <x>460</x>
-     <y>410</y>
+     <x>450</x>
+     <y>330</y>
      <width>101</width>
      <height>31</height>
     </rect>
@@ -391,8 +364,8 @@ color:gold;</string>
   <widget class="QLineEdit" name="password">
    <property name="geometry">
     <rect>
-     <x>570</x>
-     <y>410</y>
+     <x>560</x>
+     <y>330</y>
      <width>191</width>
      <height>41</height>
     </rect>
@@ -455,6 +428,76 @@ color:#FFF;</string>
    </property>
    <property name="text">
     <string>Sign in</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="firstname">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>160</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#firstname {
+	padding: 10px;
+	background-color: #fff;
+border-radius:10px;
+
+	font-size: 20px;
+	color: #374957;
+}
+
+#firstname:focus {
+	background-color: #E3E8F0;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>First Name</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>410</y>
+     <width>111</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font-size:20px;
+color:gold;</string>
+   </property>
+   <property name="text">
+    <string>Username:*</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>413</y>
+     <width>191</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#lineEdit{
+	padding: 10px;
+	background-color: #fff;
+border-radius: 10px;
+	font-size: 20px;
+	color: #374957;
+}
+
+#lineEdit:focus {
+	background-color: #E3E8F0;
+}</string>
+   </property>
+   <property name="placeholderText">
+    <string>Username</string>
    </property>
   </widget>
  </widget>

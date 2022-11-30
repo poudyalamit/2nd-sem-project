@@ -1,17 +1,28 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "homepage.h"
-#include "ui_homepage.h"
+//#include "homepage.h"
+//#include "ui_homepage.h"
 #include "createone.h"
-#include "ui_createone.h"
+//#include "ui_createone.h"
 #include "QPixmap"
 #include "QMessageBox"
 #include "QDesktopServices"
+#include <QMainWindow> //added
+#include <QSqlDatabase>
+#include<QSqlQuery>
 mainwindow::mainwindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::mainwindow)
 {
     ui->setupUi(this);
+//    added
+        mydb = QSqlDatabase::addDatabase("QSQLITE");
+
+    mydb.setDatabaseName("C:/Users/ASUS/OneDrive/Desktop/KUPOOL_FINAL1/Database1.sqlite");
+//    if(!mydb.open())
+//        ui->loginUsernameInput->setText("Failed to open the database");
+//    else
+//        ui->loginUsernameInput->setText("Connected!");
     resize(630,420);
     QPixmap passicon("C:/Users/ASUS/OneDrive/Desktop/KUPOOL_FINAL1/images/lock.png");
     ui->loginPasswordIcon->setPixmap(passicon.scaled(30,30,Qt::KeepAspectRatio));
@@ -40,19 +51,33 @@ mainwindow::~mainwindow()
 
 void mainwindow::on_loginButton_clicked()
 {
-    QString username = ui->loginUsernameInput->text();
-    QString password = ui->loginPasswordInput->text();
 
-    if(username=="admin" && password=="admin")
-{
-    homepage login_trigger;
-    login_trigger.setModal(true);
-    close();
-    login_trigger.exec();
-}else{
-        QMessageBox::warning(this,"Login Failed","Username or password is incorrect!");
+    mydb = QSqlDatabase::addDatabase("QSQLITE");
+    QSqlDatabase mydb = QSqlDatabase::addDatabase("QSQLITE");
+    mydb.setDatabaseName("C:/Users/ASUS/OneDrive/Desktop/KUPOOL_FINAL1/Database1.sqlite");
+    QString username,password; //added
+     username = ui->loginUsernameInput->text();
+     password = ui->loginPasswordInput->text();
+     if(!mydb.isOpen()){
+         qDebug()<<"Failed to open the database.";
+         return;
+     }
+//    QSqlQuery qry;
+//    if(qry.exec("select * from Info where Username= ' " + username +" '  and Password='"+password+"'")){
+//      int count=0;
+//  while(qry.next()){
+//        count++;
+//    }
+//    if(count == 1)
+//        ui->loginUsernameInput->setText("username and password is correct!");
+//    if(count>1)
+//        ui->loginUsernameInput->setText("Duplicate username and password!");
+//    if(count<1)
+//        ui->loginUsernameInput->setText("username and password is notcorrect!");
+//    }
+
+
     }
-}
 
 void mainwindow::on_forgot_password_clicked()
 {
